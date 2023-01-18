@@ -17,7 +17,7 @@ class Dorama(models.Model):
 
     name = models.CharField(max_length=40, unique=True)
     cast = models.CharField(max_length=200)
-    synopsis = models.CharField(max_length=500)
+    synopsis = models.CharField(max_length=1500)
     genre = models.CharField(
         max_length=50,
         choices=GenreOptions.choices,
@@ -32,6 +32,8 @@ class Dorama(models.Model):
         null=True,
     )
     stars = models.IntegerField()
+    trailer = models.URLField(max_length=300)
+    poster = models.URLField(max_length=300)
 
-    REQUIRED_FIELDS = ['name', 'cast', 'synopsis', 'genre', 'release_year', 'age_rating', 'stars']
+    REQUIRED_FIELDS = ['name', 'cast', 'synopsis', 'genre', 'release_year', 'age_rating', 'stars', 'trailer', 'poster']
 
