@@ -1,16 +1,25 @@
 from django.db import models
 
 class AgeRatingOptions(models.TextChoices):
-    MORNING = "Matutino"
-    AFTERNOON = "Vespertino"
-    NIGHT = "Noturno"
-    DEFAULT = "Não informado"
+    LIVRE = 'Livre'
+    DEZ = '10'
+    DOZE = '12'
+    QUATORZE = '14'
+    DEZESSEIS = '16'
+    DEZOITO = '18'
+    DEFAULT = 'Não informado'
 
 class GenreOptions(models.TextChoices):
-    MORNING = "Matutino"
-    AFTERNOON = "Vespertino"
-    NIGHT = "Noturno"
-    DEFAULT = "Não informado"
+    MORNING = 'romance'
+    AFTERNOON = 'escolar'
+    NIGHT = 'comédia'
+    POLICIAL = 'policial'
+    MEDICINA = 'drama médico'
+    FICÇAO = 'ficção científica'
+    SUSPENSE = 'suspense'
+    TERROR = 'terror'
+    OUTRO = 'outro'
+    DEFAULT = 'Não informado'
 
 
 class Dorama(models.Model):
