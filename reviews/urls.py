@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     path("reviews/dorama/<int:pk>/", views.DoramaReviewView.as_view()),
+    path("user-reviews/", views.GetUserReview.as_view()),
     path("reviews/user/<int:pk>/", views.UserReviewView.as_view()),
 ]
