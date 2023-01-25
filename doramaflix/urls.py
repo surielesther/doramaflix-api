@@ -16,9 +16,28 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
+from django.urls import include
+
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title= 'Doramaflix API',
+        default_version='1.21.4',
+        description= 'API documentation'
+    ),
+    public= True
+)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("api/", include("doramas.urls")),
-    path("api/", include("reviews.urls")),
-    path("api/", include("users.urls"))
+    path('api/', include([
+        path('', include("doramas.urls")),
+        path('', include("reviews.urls")),
+        path('', include("users.urls")),
+        path('docs/',schema_view.with_ui('swagger', cache_timeout=0)),
+    ])),
+
 ]

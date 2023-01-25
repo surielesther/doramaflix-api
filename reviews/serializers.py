@@ -6,10 +6,3 @@ class ReviewSerializer(serializers.ModelSerializer):
         model = Review
 
         fields = '__all__'
-        # [
-        #     'id',
-        #     'stars',
-        #     'review',
-        #     'user_id',
-        #     'dorama_id',
-        # ]

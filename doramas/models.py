@@ -40,7 +40,7 @@ class Dorama(models.Model):
         default=AgeRatingOptions.DEFAULT,
         null=True,
     )
-    stars = models.IntegerField()
+    stars = models.IntegerField(null=True)
     trailer = models.URLField(max_length=300)
     poster = models.URLField(max_length=300)
 
