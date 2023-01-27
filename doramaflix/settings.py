@@ -98,18 +98,18 @@ DATABASES = {
         'PORT': '5432',
         
     },
-    'sqlite3': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    # 'sqlite3': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
 }
 
-DATABASE_URL = os.getenv('DATABASE_URL')
+# DATABASE_URL = os.getenv('DATABASE_URL')
 
-if DATABASE_URL:
-    db_deploy = dj_database_url.config(default=DATABASE_URL)
-    DATABASES['default'].update(db_deploy)
-    DEBUG = False
+# if DATABASE_URL:
+#     db_deploy = dj_database_url.config(default=DATABASE_URL)
+#     DATABASES['default'].update(db_deploy)
+#     DEBUG = False
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
