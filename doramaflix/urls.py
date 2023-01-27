@@ -15,12 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
-
 from django.urls import include
-
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -41,3 +39,5 @@ urlpatterns = [
     ])),
 
 ]
+
+urlpatterns += staticfiles_urlpatterns()
