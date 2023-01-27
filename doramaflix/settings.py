@@ -31,7 +31,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', False)
 
-ALLOWED_HOSTS = ['doramaflix-api-production.up.railway.app', '0.0.0.0']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+# ['doramaflix-api-production.up.railway.app/', '0.0.0.0']
 
 
 # Application definition
@@ -94,7 +95,7 @@ DATABASES = {
         'USER': os.getenv('POSTGRES_USER'),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
         'HOST': os.getenv('HOST'),
-        'PORT': os.getenv('PORT'),
+        'PORT': '5432',
         
     },
     'sqlite3': {
