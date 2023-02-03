@@ -10,16 +10,15 @@ class AgeRatingOptions(models.TextChoices):
     DEFAULT = 'Não informado'
 
 class GenreOptions(models.TextChoices):
-    MORNING = 'romance'
-    AFTERNOON = 'escolar'
-    NIGHT = 'comédia'
+    ROMANCE = 'romance'
+    ESCOLAR = 'escolar'
+    COMEDIA = 'comédia'
     POLICIAL = 'policial'
     MEDICINA = 'drama médico'
     FICÇAO = 'ficção científica'
     SUSPENSE = 'suspense'
     TERROR = 'terror'
-    OUTRO = 'outro'
-    DEFAULT = 'Não informado'
+    DEFAULT = 'outros'
 
 
 class Dorama(models.Model):
